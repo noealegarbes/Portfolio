@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import Stats from "stats.js";
-import { Box, Flex, Text } from "@chakra-ui/react";
 
 const WaveParticles: React.FC = () => {
     const mountRef = useRef<HTMLDivElement | null>(null);
+
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         let container: HTMLDivElement;
@@ -142,6 +143,11 @@ const WaveParticles: React.FC = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // Trigger the transition effect after the component mounts
+        setTimeout(() => setIsVisible(true), 100);
+    }, []);
+
     return (
         <div
             style={{
@@ -159,53 +165,13 @@ const WaveParticles: React.FC = () => {
                 style={{
                     width: "95vw",
                     height: "95vh",
+                    transition: "opacity 0.8s ease, transform 0.8s ease", // Smooth transition
+                    opacity: isVisible ? 1 : 0, // Control visibility
+                    transform: isVisible ? "scale(1)" : "scale(0.9)",
                     borderRadius: "10px",
                     overflow: "hidden",
-                    zIndex: 1,
                 }}
             ></div>
-            <Flex
-                justifyContent="space-around"
-                alignItems="center"
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    zIndex: 2,
-                    pointerEvents: "none",
-                }}
-            >
-                <Box
-                    w={"95vw"}
-                    h={"95vh"}
-                    bg="none"
-                    backdropFilter={"auto"}
-                    backdropBlur={"18px"}
-                    rounded={"10px"}
-                    boxShadow="0 0 10px rgba(0, 0, 0, 0.50)" // Custom shadow
-                >
-                    <Text
-                        padding={"10px"}
-                        paddingBottom={0}
-                        color={"white"}
-                        fontSize={"80px"}
-                        fontWeight={"bold"}
-                    >
-                        DIONICO NOE ALEGARBES
-                    </Text>
-                    <Text
-                        padding={"13px"}
-                        paddingTop={"0"}
-                        color={"white"}
-                        fontSize={"20px"}
-                        fontWeight={"thin"}
-                    >
-                        Digital Craftsman [ Artist / Developer / Designer ]
-                    </Text>
-                </Box>
-            </Flex>
         </div>
     );
 };
