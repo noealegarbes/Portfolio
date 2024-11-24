@@ -2,7 +2,7 @@
 import React from "react";
 import ThreeScene from "../components/ThreeScene";
 import WaveGeometry from "@/components/WaveScene";
-import { Box, Flex, Text, VStack, Grid, GridItem, Link, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, Grid, GridItem, Link, Button, Container } from "@chakra-ui/react";
 const HomePage: React.FC = () => {
     return (
         <div>
@@ -46,17 +46,20 @@ const HomePage: React.FC = () => {
                         paddingTop={"0"}
                         color={"white"}
                         fontSize={"20px"}
-                        fontWeight={"thin"}
+                        fontFamily={"'Bungee Hairline', sans-serif"}
+                        fontWeight={"bold"}
                     >
                         Digital Craftsman [ Artist / Developer / Designer ]
                     </Text>
                     <Grid
                         flex="1"
+                        templateColumns="repeat(3, 1fr)"
                         w="100%"
                     >
+                        {/* socials */}
                         <GridItem
-                            rowSpan={2}
-                            colSpan={1}
+                            colSpan={2}
+                            rowSpan={1}
                             display={"flex"}
                             alignItems={"end"}
                             bottom="0"
@@ -70,25 +73,40 @@ const HomePage: React.FC = () => {
                                 <Link
                                     href="https://github.com/noealegarbes"
                                     color="white"
-                                    fontWeight="thin"
+                                    fontFamily={"'Bungee Hairline', sans-serif"}
+                                    fontWeight={"bold"}
                                 >
                                     github
                                 </Link>
                                 <Link
                                     href="https://www.instagram.com/_dnart/"
                                     color="white"
-                                    fontWeight="thin"
+                                    fontFamily={"'Bungee Hairline', sans-serif"}
+                                    fontWeight={"bold"}
                                 >
                                     Instagram
                                 </Link>
                                 <Link
                                     href="https://www.linkedin.com/in/noe-alegarbes/"
                                     color="white"
-                                    fontWeight="thin"
+                                    fontFamily={"'Bungee Hairline', sans-serif"}
+                                    fontWeight={"bold"}
                                 >
                                     linkedIn
                                 </Link>
                             </VStack>
+                        </GridItem>
+
+                        <GridItem
+                            colSpan={1}
+                            rowSpan={1}
+                            display={"flex"}
+                        >
+                            {/* <Box
+                                backgroundColor={"red"}
+                                width={"100%"}
+                                height={"100%"}
+                            ></Box> */}
                         </GridItem>
                     </Grid>
                 </Box>
