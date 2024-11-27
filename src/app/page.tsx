@@ -59,6 +59,7 @@ const HomePage: React.FC = () => {
                     >
                         Digital Craftsman [ Artist / Developer / Designer ]
                     </Text>
+                    {/* test commit */}
                     <Grid
                         flex="1"
                         templateColumns="repeat(3, 1fr)"
