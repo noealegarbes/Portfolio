@@ -1,53 +1,61 @@
 // app/page.tsx
 import React from "react";
-import ThreeScene from "../components/ThreeScene";
 import WaveGeometry from "@/components/WaveScene";
 import { Box, Flex, Text, VStack, Grid, GridItem, Link, Button, Container } from "@chakra-ui/react";
 const HomePage: React.FC = () => {
     return (
         <div>
-            {/* <ThreeScene /> */}
             <WaveGeometry />
             <Flex
-                justifyContent="space-around"
-                alignItems="center"
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    pointerEvents: "none",
-                }}
+                className="
+                    justify-around 
+                    items-center 
+                    absolute 
+                    inset-0 
+                    w-full 
+                    h-full 
+                    pointer-events-none
+                "
             >
                 <Box
-                    w={"95vw"}
-                    h={"95vh"}
-                    bg="none"
-                    backdropFilter={"auto"}
-                    backdropBlur={"18px"}
-                    display="flex"
-                    flexDirection="column"
-                    rounded={"10px"}
-                    boxShadow="0 0 10px rgba(0, 0, 0, 0.50)"
-                    pointerEvents={"auto"}
+                    className="
+                        w-[95vw] 
+                        h-[95vh] 
+                        bg-none 
+                        backdrop-blur-[18px] 
+                        flex 
+                        flex-col 
+                        border 
+                        border-solid 
+                        border-white 
+                        rounded-[10px] 
+                        shadow-[0_0_10px_rgba(0,0,0,0.5)] 
+                        pointer-events-auto
+                    "
                 >
                     <Text
-                        padding={"10px"}
-                        paddingBottom={0}
-                        fontFamily="'Audiowide', sans-serif"
-                        color={"white"}
-                        fontSize={"80px"}
+                        className="
+                            px-[25px] 
+                            pb-0 
+                            font-[Audiowide] 
+                            text-white 
+                            text-[80px]
+                            fade-in"
+                        style={{ animationDelay: "0.2s" }}
                     >
                         DIONICO NOE ALEGARBES
                     </Text>
                     <Text
-                        padding={"13px"}
-                        paddingTop={"0"}
-                        color={"white"}
-                        fontSize={"20px"}
+                        className="
+                            px-[25px] 
+                            pt-0 
+                            text-white 
+                            text-[20px] 
+                            font-bold
+                            fade-in
+                        "
                         fontFamily={"'Bungee Hairline', sans-serif"}
-                        fontWeight={"bold"}
+                        style={{ animationDelay: "0.4s" }}
                     >
                         Digital Craftsman [ Artist / Developer / Designer ]
                     </Text>
@@ -65,32 +73,40 @@ const HomePage: React.FC = () => {
                             bottom="0"
                         >
                             <VStack
-                                align="left"
-                                padding="13px"
-                                position="relative"
-                                bottom="0"
+                                className="
+                                    p-[25px] 
+                                    relative 
+                                    bottom-0
+                                "
+                                align={"left"}
                             >
                                 <Link
                                     href="https://github.com/noealegarbes"
                                     color="white"
+                                    className="fade-in"
                                     fontFamily={"'Bungee Hairline', sans-serif"}
-                                    fontWeight={"bold"}
+                                    fontWeight="bold"
+                                    style={{ animationDelay: "0.5s" }}
                                 >
                                     github
                                 </Link>
                                 <Link
                                     href="https://www.instagram.com/_dnart/"
                                     color="white"
+                                    className="fade-in"
                                     fontFamily={"'Bungee Hairline', sans-serif"}
-                                    fontWeight={"bold"}
+                                    fontWeight="bold"
+                                    style={{ animationDelay: "0.8s" }}
                                 >
                                     Instagram
                                 </Link>
                                 <Link
                                     href="https://www.linkedin.com/in/noe-alegarbes/"
                                     color="white"
+                                    className="fade-in"
                                     fontFamily={"'Bungee Hairline', sans-serif"}
-                                    fontWeight={"bold"}
+                                    fontWeight="bold"
+                                    style={{ animationDelay: "1s" }}
                                 >
                                     linkedIn
                                 </Link>
@@ -102,11 +118,7 @@ const HomePage: React.FC = () => {
                             rowSpan={1}
                             display={"flex"}
                         >
-                            {/* <Box
-                                backgroundColor={"red"}
-                                width={"100%"}
-                                height={"100%"}
-                            ></Box> */}
+                            <Box className="bg-red-400 opacity-10 w-full h-full"></Box>
                         </GridItem>
                     </Grid>
                 </Box>
