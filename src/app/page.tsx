@@ -1,7 +1,7 @@
 // app/page.tsx
 import React from "react";
 import WaveGeometry from "@/components/WaveScene";
-import { Box, Flex, Text, VStack, Grid, GridItem, Link, Button, Container } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, Grid, GridItem, Link, Button } from "@chakra-ui/react";
 const HomePage: React.FC = () => {
     return (
         <div>
@@ -26,8 +26,8 @@ const HomePage: React.FC = () => {
                         flex 
                         flex-col 
                         border 
-                        border-solid 
-                        border-white 
+                        border-solid
+                        border-gray-500
                         rounded-[10px] 
                         shadow-[0_0_10px_rgba(0,0,0,0.5)] 
                         pointer-events-auto
@@ -35,31 +35,37 @@ const HomePage: React.FC = () => {
                 >
                     <Text
                         className="
-                            px-[25px] 
-                            pb-0 
-                            font-[Audiowide] 
-                            text-white 
-                            text-[80px]
-                            fade-in"
+                            p-[25px]
+                            pb-4
+                            pt-4
+                            text-white
+                            text-3xl
+                            sm:text-5xl
+                            lg:text-7xl
+                            font-[Jura]
+                            fade-in
+                            font-semibold"
                         style={{ animationDelay: "0.2s" }}
                     >
-                        DIONICO NOE ALEGARBES
+                        NOE ALEGARBES
                     </Text>
                     <Text
                         className="
                             px-[25px] 
                             pt-0 
-                            text-white 
+                            text-white
+                            text-base         
+                            sm:text-lg      
+                            lg:text-xl
                             text-[20px] 
-                            font-bold
                             fade-in
+                            font-semibold
                         "
                         fontFamily={"'Bungee Hairline', sans-serif"}
                         style={{ animationDelay: "0.4s" }}
                     >
-                        Digital Craftsman [ Artist / Developer / Designer ]
+                        Software Engineer / Developer
                     </Text>
-                    {/* test commit */}
                     <Grid
                         flex="1"
                         templateColumns="repeat(3, 1fr)"
@@ -67,7 +73,7 @@ const HomePage: React.FC = () => {
                     >
                         {/* socials */}
                         <GridItem
-                            colSpan={2}
+                            colSpan={[1, 2]}
                             rowSpan={1}
                             display={"flex"}
                             alignItems={"end"}
@@ -84,9 +90,8 @@ const HomePage: React.FC = () => {
                                 <Link
                                     href="https://github.com/noealegarbes"
                                     color="white"
-                                    className="fade-in"
+                                    className="fade-in font-semibold"
                                     fontFamily={"'Bungee Hairline', sans-serif"}
-                                    fontWeight="bold"
                                     style={{ animationDelay: "0.5s" }}
                                 >
                                     github
@@ -94,7 +99,7 @@ const HomePage: React.FC = () => {
                                 <Link
                                     href="https://www.instagram.com/_dnart/"
                                     color="white"
-                                    className="fade-in"
+                                    className="fade-in font-semibold"
                                     fontFamily={"'Bungee Hairline', sans-serif"}
                                     fontWeight="bold"
                                     style={{ animationDelay: "0.8s" }}
@@ -104,7 +109,7 @@ const HomePage: React.FC = () => {
                                 <Link
                                     href="https://www.linkedin.com/in/noe-alegarbes/"
                                     color="white"
-                                    className="fade-in"
+                                    className="fade-in font-semibold"
                                     fontFamily={"'Bungee Hairline', sans-serif"}
                                     fontWeight="bold"
                                     style={{ animationDelay: "1s" }}
@@ -115,11 +120,24 @@ const HomePage: React.FC = () => {
                         </GridItem>
 
                         <GridItem
-                            colSpan={1}
+                            colSpan={[2, 1]}
                             rowSpan={1}
                             display={"flex"}
                         >
-                            <Box className="bg-red-400 opacity-10 w-full h-full"></Box>
+                            <Box className="w-full h-full relative">
+                                <Text
+                                    className="absolute bottom-0 right-0 p-5 text-white text-end w-full font-[Jura] font-thin sm:w-1/2 md:w-full lg:w-1/2 ml-auto fade-in"
+                                    style={{ animationDelay: "1s" }}
+                                >
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+                                    nostrum impedit aliquam mollitia, fugiat placeat dicta
+                                    quibusdam. Dolor aliquid quod veniam eveniet atque aliquam
+                                    minima at ipsum fugiat? Ipsa, vel. Lorem ipsum dolor sit amet
+                                    consectetur, adipisicing elit. Quis nostrum impedit aliquam
+                                    mollitia, fugiat placeat dicta quibusdam. Dolor aliquid quod
+                                    veniam eveniet atque aliquam minima at ipsum fugiat? Ipsa, vel.
+                                </Text>
+                            </Box>
                         </GridItem>
                     </Grid>
                 </Box>
