@@ -33,6 +33,10 @@ const HomePage: React.FC = () => {
                         pointer-events-auto
                         justify-center
                     "
+                    style={{
+                        backdropFilter: "blur(20px)",
+                        WebkitBackdropFilter: "blur(20px)",
+                    }}
                 >
                     <Text
                         className="
