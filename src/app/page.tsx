@@ -22,7 +22,9 @@ const HomePage: React.FC = () => {
                         w-[95vw] 
                         h-[95vh] 
                         bg-none 
-                        backdrop-blur-[20px] 
+                        backdrop-blur-[20px]
+                        sm:backdrop-blur-[15px]
+                        lg:backdrop-blur-[20px]
                         flex 
                         flex-col 
                         border 
@@ -34,7 +36,7 @@ const HomePage: React.FC = () => {
                         justify-center
                     "
                     style={{
-                        WebkitBackdropFilter: "blur(8px)",
+                        WebkitBackdropFilter: "blur(12px)",
                     }}
                 >
                     <Text
