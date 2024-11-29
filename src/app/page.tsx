@@ -4,7 +4,7 @@ import WaveGeometry from "@/components/WaveScene";
 import { Box, Flex, Text, Link, HStack } from "@chakra-ui/react";
 const HomePage: React.FC = () => {
     return (
-        <div>
+        <div style={{ margin: 0, padding: 0, height: "100vh", width: "100vw" }}>
             <WaveGeometry />
             <Flex
                 className="
