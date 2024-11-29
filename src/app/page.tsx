@@ -1,7 +1,7 @@
 // app/page.tsx
 import React from "react";
 import WaveGeometry from "@/components/WaveScene";
-import { Box, Flex, Text, VStack, Grid, GridItem, Link, Button, HStack } from "@chakra-ui/react";
+import { Box, Flex, Text, Link, HStack } from "@chakra-ui/react";
 const HomePage: React.FC = () => {
     return (
         <div>
