@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-import Stats from "stats.js";
 
 const WaveParticles: React.FC = () => {
     const mountRef = useRef<HTMLDivElement | null>(null);

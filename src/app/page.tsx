@@ -1,7 +1,7 @@
 // app/page.tsx
 import React from "react";
 import WaveGeometry from "@/components/WaveScene";
-import { Box, Flex, Text, VStack, Grid, GridItem, Link, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, Grid, GridItem, Link, Button, HStack } from "@chakra-ui/react";
 const HomePage: React.FC = () => {
     return (
         <div>
@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
                         w-[95vw] 
                         h-[95vh] 
                         bg-none 
-                        backdrop-blur-[18px] 
+                        backdrop-blur-[20px] 
                         flex 
                         flex-col 
                         border 
@@ -31,6 +31,7 @@ const HomePage: React.FC = () => {
                         rounded-[10px] 
                         shadow-[0_0_10px_rgba(0,0,0,0.5)] 
                         pointer-events-auto
+                        justify-center
                     "
                 >
                     <Text
@@ -44,6 +45,7 @@ const HomePage: React.FC = () => {
                             lg:text-7xl
                             font-[Jura]
                             fade-in
+                            text-center
                             font-semibold"
                         style={{ animationDelay: "0.2s" }}
                     >
@@ -54,8 +56,9 @@ const HomePage: React.FC = () => {
                             px-[25px] 
                             pt-0 
                             text-white
+                            text-center
                             text-base         
-                            sm:text-lg      
+                            sm:text-lg  
                             lg:text-xl
                             text-[20px] 
                             fade-in
@@ -64,82 +67,62 @@ const HomePage: React.FC = () => {
                         fontFamily={"'Bungee Hairline', sans-serif"}
                         style={{ animationDelay: "0.4s" }}
                     >
-                        Software Engineer / Developer
+                        Software Engineer | Developer
                     </Text>
-                    <Grid
-                        flex="1"
-                        templateColumns="repeat(3, 1fr)"
-                        w="100%"
-                    >
-                        {/* socials */}
-                        <GridItem
-                            colSpan={[1, 2]}
-                            rowSpan={1}
-                            display={"flex"}
-                            alignItems={"end"}
-                            bottom="0"
-                        >
-                            <VStack
-                                className="
+                    <HStack
+                        className="
                                     p-[25px] 
                                     relative 
                                     bottom-0
+                                    justify-center
                                 "
-                                align={"left"}
-                            >
-                                <Link
-                                    href="https://github.com/noealegarbes"
-                                    color="white"
-                                    className="fade-in font-semibold"
-                                    fontFamily={"'Bungee Hairline', sans-serif"}
-                                    style={{ animationDelay: "0.5s" }}
-                                >
-                                    github
-                                </Link>
-                                <Link
-                                    href="https://www.instagram.com/_dnart/"
-                                    color="white"
-                                    className="fade-in font-semibold"
-                                    fontFamily={"'Bungee Hairline', sans-serif"}
-                                    fontWeight="bold"
-                                    style={{ animationDelay: "0.8s" }}
-                                >
-                                    Instagram
-                                </Link>
-                                <Link
-                                    href="https://www.linkedin.com/in/noe-alegarbes/"
-                                    color="white"
-                                    className="fade-in font-semibold"
-                                    fontFamily={"'Bungee Hairline', sans-serif"}
-                                    fontWeight="bold"
-                                    style={{ animationDelay: "1s" }}
-                                >
-                                    linkedIn
-                                </Link>
-                            </VStack>
-                        </GridItem>
-
-                        <GridItem
-                            colSpan={[2, 1]}
-                            rowSpan={1}
-                            display={"flex"}
+                        spacing="10px"
+                        align={"center"}
+                    >
+                        <Link
+                            href="https://github.com/noealegarbes"
+                            color="white"
+                            className="fade-in font-semibold"
+                            fontFamily={"'Bungee Hairline', sans-serif"}
+                            style={{ animationDelay: "0.5s" }}
                         >
-                            <Box className="w-full h-full relative">
-                                <Text
-                                    className="absolute bottom-0 right-0 p-5 text-white text-end w-full font-[Jura] font-thin sm:w-1/2 md:w-full lg:w-1/2 ml-auto fade-in"
-                                    style={{ animationDelay: "1s" }}
-                                >
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
-                                    nostrum impedit aliquam mollitia, fugiat placeat dicta
-                                    quibusdam. Dolor aliquid quod veniam eveniet atque aliquam
-                                    minima at ipsum fugiat? Ipsa, vel. Lorem ipsum dolor sit amet
-                                    consectetur, adipisicing elit. Quis nostrum impedit aliquam
-                                    mollitia, fugiat placeat dicta quibusdam. Dolor aliquid quod
-                                    veniam eveniet atque aliquam minima at ipsum fugiat? Ipsa, vel.
-                                </Text>
-                            </Box>
-                        </GridItem>
-                    </Grid>
+                            github
+                        </Link>
+                        <Text
+                            color="white"
+                            className="fade-in"
+                            style={{ animationDelay: "0.6s" }}
+                        >
+                            ·
+                        </Text>
+                        <Link
+                            href="https://www.instagram.com/_dnart/"
+                            color="white"
+                            className="fade-in font-semibold"
+                            fontFamily={"'Bungee Hairline', sans-serif"}
+                            fontWeight="bold"
+                            style={{ animationDelay: "0.8s" }}
+                        >
+                            Instagram
+                        </Link>
+                        <Text
+                            color="white"
+                            className="fade-in"
+                            style={{ animationDelay: "0.9s" }}
+                        >
+                            ·
+                        </Text>
+                        <Link
+                            href="https://www.linkedin.com/in/noe-alegarbes/"
+                            color="white"
+                            className="fade-in font-semibold"
+                            fontFamily={"'Bungee Hairline', sans-serif"}
+                            fontWeight="bold"
+                            style={{ animationDelay: "1s" }}
+                        >
+                            linkedIn
+                        </Link>
+                    </HStack>
                 </Box>
             </Flex>
         </div>
