@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
                         justify-center
                     "
                     style={{
-                        WebkitBackdropFilter: "blur(5px)",
+                        WebkitBackdropFilter: "blur(8px)",
                     }}
                 >
                     <Text
